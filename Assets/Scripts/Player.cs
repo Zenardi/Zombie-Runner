@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class Player : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class Player : MonoBehaviour {
 	private bool reSpawn = false;
 	private Transform[] spawnPoints;
 	private bool lastRespawnToggle = false;
+    public Vector3 landingArea;
 
 	// Use this for initialization
 	void Start () {
@@ -26,16 +28,25 @@ public class Player : MonoBehaviour {
 	}
 
 	private void Respawn() {
-		int i = Random.Range (1, spawnPoints.Length);
+		int i = UnityEngine.Random.Range (1, spawnPoints.Length);
 		transform.position = spawnPoints [i].transform.position;
 	}
 
 	void OnFindClearArea () {
-		Invoke ("DropFlare", 3f);
+		//Invoke ("DropFlare", 3f);
+        StartCoroutine(DropFlare());
 	}
 
-	void DropFlare () {
-		Instantiate (landingAreaPrefab, transform.position, transform.rotation);
-	}
+    private IEnumerator DropFlare()
+    {
+        landingArea = transform.position;
+        Instantiate(landingAreaPrefab, transform.position, transform.rotation);
+        yield return new WaitForEndOfFrame();
+    }
+
+    public Vector3 GetLandingAreaLocation()
+    {
+        return landingArea;
+    }
 
 }

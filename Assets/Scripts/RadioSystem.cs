@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class RadioSystem : MonoBehaviour {
 
@@ -7,10 +8,12 @@ public class RadioSystem : MonoBehaviour {
 	public AudioClip initialCallReply;
 
 	private AudioSource audioSource;
+    private Helicopter helicopter;
 
 	// Use this for initialization
 	void Start () {
 		audioSource = GetComponent<AudioSource> ();
+        helicopter = FindObjectOfType<Helicopter>();
 	}
 	
 	void OnMakeInitialHeliCall () {
@@ -23,7 +26,16 @@ public class RadioSystem : MonoBehaviour {
 	void InitialReply () {
 		audioSource.clip = initialCallReply;
 		audioSource.Play ();
-		BroadcastMessage ("OnDispatchHelicopter");
+
+        StartCoroutine(DispathHelicopter());
+
+		//BroadcastMessage ("OnDispatchHelicopter");
 	}
 
+    private IEnumerator DispathHelicopter()
+    {
+        helicopter.OnDispatchHelicopter();
+
+        yield return new WaitForEndOfFrame();
+    }
 }
