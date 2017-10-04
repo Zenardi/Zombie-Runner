@@ -1,0 +1,133 @@
+fileFormatVersion: 2
+guid: 47987e1284b72a6439943d475befab32
+timeCreated: 1483675315
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: repeater
+    100002: repeater_bullet
+    100004: repeater_casing
+    100006: //RootNode
+    100008: bolt
+    100010: dustGuard
+    100012: ejector
+    100014: hammer
+    100016: hatch
+    100018: lever
+    100020: repeater_001
+    100022: safety
+    100024: trigger
+    400000: repeater
+    400002: repeater_bullet
+    400004: repeater_casing
+    400006: //RootNode
+    400008: bolt
+    400010: dustGuard
+    400012: ejector
+    400014: hammer
+    400016: hatch
+    400018: lever
+    400020: repeater_001
+    400022: safety
+    400024: trigger
+    2300000: repeater
+    2300002: repeater_bullet
+    2300004: repeater_casing
+    2300006: bolt
+    2300008: dustGuard
+    2300010: ejector
+    2300012: hammer
+    2300014: hatch
+    2300016: lever
+    2300018: repeater_001
+    2300020: safety
+    2300022: trigger
+    3300000: repeater
+    3300002: repeater_bullet
+    3300004: repeater_casing
+    3300006: bolt
+    3300008: dustGuard
+    3300010: ejector
+    3300012: hammer
+    3300014: hatch
+    3300016: lever
+    3300018: repeater_001
+    3300020: safety
+    3300022: trigger
+    4300000: repeater_bullet
+    4300002: repeater_casing
+    4300004: repeater
+    4300006: repeater_001
+    4300008: safety
+    4300010: ejector
+    4300012: dustGuard
+    4300014: hatch
+    4300016: bolt
+    4300018: lever
+    4300020: trigger
+    4300022: hammer
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -41,6 +41,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+        private Animator animator;
+        private bool shoot = false;
 
         // Use this for initialization
         private void Start()
@@ -53,6 +55,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_StepCycle = 0f;
             m_NextStep = m_StepCycle/2f;
             m_Jumping = false;
+            animator = GetComponent<Animator>();
 
 			AudioSource[] audioSources = GetComponents<AudioSource> ();
 			foreach (AudioSource audioSource in audioSources) {
@@ -214,11 +217,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             bool waswalking = m_IsWalking;
 
-#if !MOBILE_INPUT
+//#if !MOBILE_INPUT
             // On standalone builds, walk/run speed is modified by a key press.
             // keep track of whether or not the character is walking or running
             m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
-#endif
+
+            shoot = Input.GetMouseButtonDown(0);
+            if (shoot)
+            {
+                animator.SetTrigger("T_idle_to_shoot");
+                Debug.Log("Shooting");
+            }
+            //#endif
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
             m_Input = new Vector2(horizontal, vertical);
@@ -228,6 +238,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_Input.Normalize();
             }
+
+            if (m_IsWalking)
+                animator.SetTrigger("T_idle_to_walk");
+            else
+                animator.SetTrigger("T_walk_to_idle");
 
             // handle speed change to give an fov kick
             // only if the player is going to a run, is running and the fovkick is to be used
