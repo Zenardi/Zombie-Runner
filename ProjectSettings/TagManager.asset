@@ -13,6 +13,7 @@ TagManager:
   - glass
   - Missile
   - Laser
+  - Bullet
   layers:
   - Default
   - TransparentFX

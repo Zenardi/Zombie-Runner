@@ -5,8 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zombie-Runner.Plugins", "Zo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zombie-Runner", "Zombie-Runner.csproj", "{C6BA35FC-D9CB-B255-C6B5-57764440C40B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zombie-Runner.Editor.Plugins", "Zombie-Runner.Editor.Plugins.csproj", "{B5E5DF0F-7C59-7CE3-D6B7-DB7A8AC89335}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zombie-Runner.Editor", "Zombie-Runner.Editor.csproj", "{6C6AB56D-08A2-1BA6-8108-BDD0D28BDA64}"
 EndProject
 Global
@@ -23,10 +21,6 @@ Global
 		{C6BA35FC-D9CB-B255-C6B5-57764440C40B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6BA35FC-D9CB-B255-C6B5-57764440C40B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6BA35FC-D9CB-B255-C6B5-57764440C40B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B5E5DF0F-7C59-7CE3-D6B7-DB7A8AC89335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B5E5DF0F-7C59-7CE3-D6B7-DB7A8AC89335}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B5E5DF0F-7C59-7CE3-D6B7-DB7A8AC89335}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B5E5DF0F-7C59-7CE3-D6B7-DB7A8AC89335}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6C6AB56D-08A2-1BA6-8108-BDD0D28BDA64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6C6AB56D-08A2-1BA6-8108-BDD0D28BDA64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C6AB56D-08A2-1BA6-8108-BDD0D28BDA64}.Release|Any CPU.ActiveCfg = Release|Any CPU

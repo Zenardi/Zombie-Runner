@@ -8,13 +8,13 @@ public class Player : MonoBehaviour {
 	public GameObject landingAreaPrefab;
 
 	private bool reSpawn = false;
-	private Transform[] spawnPoints;
+	//private Transform[] spawnPoints;
 	private bool lastRespawnToggle = false;
     public Vector3 landingArea;
 
 	// Use this for initialization
 	void Start () {
-		spawnPoints = playerSpawnPoints.GetComponentsInChildren<Transform> ();
+		//spawnPoints = playerSpawnPoints.GetComponentsInChildren<Transform> ();
 	}
 	
 	// Update is called once per frame
@@ -28,8 +28,8 @@ public class Player : MonoBehaviour {
 	}
 
 	private void Respawn() {
-		int i = UnityEngine.Random.Range (1, spawnPoints.Length);
-		transform.position = spawnPoints [i].transform.position;
+		//int i = UnityEngine.Random.Range (1, spawnPoints.Length);
+		//transform.position = spawnPoints [i].transform.position;
 	}
 
 	void OnFindClearArea () {
