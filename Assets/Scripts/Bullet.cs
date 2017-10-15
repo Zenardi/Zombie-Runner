@@ -6,7 +6,7 @@ namespace ZombieRunner.Ammo
 {
     public class Bullet : MonoBehaviour
     {
-        public float bulletSpeed = 15;
+        public float bulletSpeed = 5;
         private Rigidbody _rigidbody;
         private float _timeLeft = 15000; //destroy bullet after 5 secs
 
@@ -17,7 +17,7 @@ namespace ZombieRunner.Ammo
 
         private void Update()
         {
-            _rigidbody.velocity = transform.forward * bulletSpeed;
+            // _rigidbody.AddForce(transform.forward * bulletSpeed);
 
             _timeLeft -= Time.deltaTime;
             if (_timeLeft < 0)

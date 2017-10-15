@@ -20,7 +20,7 @@ namespace ZombieRunner.Characters.ThirdPerson
         public ThirdPersonCharacter character { get; private set; } // the character we are controlling
         public Transform target; // target to aim for
         private Animator animator;
-        private float stoppingDistance = 2f;
+        private float stoppingDistance = 3f;
         private bool closeEnough = false;
         private EnemyStateAI enemyStateAi = EnemyStateAI.Chase;
         // Use this for initialization
@@ -45,7 +45,7 @@ namespace ZombieRunner.Characters.ThirdPerson
 
                 if (closeEnough)
                 {
-                    
+
                     StopAllCoroutines();
                     StartCoroutine(StopAndAttack());
                 }

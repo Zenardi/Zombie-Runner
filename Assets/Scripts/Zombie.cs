@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ZombieRunner.Ammo;
@@ -15,17 +16,8 @@ public class Zombie : MonoBehaviour {
 		
 	}
 
-    private void OnTriggerEnter(Collider other)
+    internal void Damage(int gunDamage)
     {
-        if(other.GetComponent<Bullet>() != null)
-        {
-            Debug.Log("Wow, a bullet hited me");
-            //Play damage anim
-            //Update Health
-            //Destroy bullet
-            Destroy(other.gameObject);
-
-            
-        }
+        Debug.Log("Ouch!");
     }
 }

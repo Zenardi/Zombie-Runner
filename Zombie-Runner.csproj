@@ -247,6 +247,7 @@
     <Compile Include="Assets\Scripts\PlatformSpecific\StandaloneInput.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\RadioSystem.cs" />
+    <Compile Include="Assets\Scripts\RaycastShoot.cs" />
     <Compile Include="Assets\Scripts\RigidbodyFirstPersonController.cs" />
     <Compile Include="Assets\Scripts\SimpleMouseRotator.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonCharacter.cs" />
@@ -254,6 +255,9 @@
     <Compile Include="Assets\Scripts\TouchPad.cs" />
     <Compile Include="Assets\Scripts\VirtualInput.cs" />
     <Compile Include="Assets\Scripts\Zombie.cs" />
+    <Compile Include="Assets\SMC Pack 1\Demo\Files\V_SMC_Camera.cs" />
+    <Compile Include="Assets\SMC Pack 1\Demo\Files\V_SMC_Handler.cs" />
+    <Compile Include="Assets\SMC Pack 1\Demo\Files\V_Text.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Prefabs\Helicopter\Helicopter\Info.txt" />

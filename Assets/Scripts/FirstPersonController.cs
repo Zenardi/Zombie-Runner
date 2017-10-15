@@ -283,11 +283,9 @@ namespace ZombieRunner.Characters.FirstPerson
 
         private IEnumerator Fire()
         {
-            Debug.Log("Fire");
             animator.SetTrigger("T_idle_to_shoot");
-            Bullet b = Instantiate(bullet, bulletGripPoint.transform.position, Quaternion.identity) as Bullet;
-            b.transform.parent = GameObject.Find("AmmoGripPoint").transform;
-            b.transform.position = bulletGripPoint.transform.position;
+            //(Instantiate(bullet, bulletGripPoint.transform.position, Quaternion.identity) as Bullet).transform.parent = GameObject.Find("AmmoGripPoint").transform;
+
             yield return new WaitForEndOfFrame();
         }
 
