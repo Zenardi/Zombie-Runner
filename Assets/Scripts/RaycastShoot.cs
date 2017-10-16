@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zombie.Characters;
 
 public class RaycastShoot : MonoBehaviour {
 
     public int gunDamage = 1;                                           // Set the number of hitpoints that this gun will take away from shot objects with a health script
     public float fireRate = 0.25f;                                      // Number in seconds which controls how often the player can fire
     public float weaponRange = 50f;                                     // Distance in Unity units over which the player can fire
-    public float hitForce = 100f;                                       // Amount of force which will be added to objects with a rigidbody shot by the player
+    public float hitForce = 1f;                                       // Amount of force which will be added to objects with a rigidbody shot by the player
     public Transform gunEnd;                                            // Holds a reference to the gun end object, marking the muzzle location of the gun
 
     [SerializeField] private Camera fpsCam;                                              // Holds a reference to the first person camera
@@ -39,7 +40,7 @@ public class RaycastShoot : MonoBehaviour {
             nextFire = Time.time + fireRate;
 
             // Start our ShotEffect coroutine to turn our laser line on and off
-            StartCoroutine(ShotEffect());
+            //StartCoroutine(ShotEffect());
 
             // Create a vector at the center of our camera's viewport
             Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
@@ -57,7 +58,7 @@ public class RaycastShoot : MonoBehaviour {
                 laserLine.SetPosition(1, hit.point);
 
                 // Get a reference to a health script attached to the collider we hit
-                Zombie health = hit.collider.GetComponent<Zombie>();
+                ZombieCharacter health = hit.collider.GetComponent<ZombieCharacter>();
 
                 // If there was a health script attached
                 if (health != null)

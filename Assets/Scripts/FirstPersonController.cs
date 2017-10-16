@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using ZombieRunner.Ammo;
 using ZombieRunner.CrossPlatformInput;
 using ZombieRunner.Utility;
 using Random = UnityEngine.Random;
@@ -36,8 +35,8 @@ namespace ZombieRunner.Characters.FirstPerson
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
-        [SerializeField] public Bullet bullet;
         [SerializeField] public GameObject bulletGripPoint;
+        [SerializeField] public GameObject Fps_Player_Prafab;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -55,6 +54,7 @@ namespace ZombieRunner.Characters.FirstPerson
         private Animator animator;
         private bool shoot = false;
         private PlayerState playerState;
+        private Player player;
 
         // Use this for initialization
         private void Start()
@@ -69,6 +69,7 @@ namespace ZombieRunner.Characters.FirstPerson
             m_Jumping = false;
             animator = GetComponent<Animator>();
             playerState = PlayerState.Idle;
+            player = GetComponent<Player>();
 
 			AudioSource[] audioSources = GetComponents<AudioSource> ();
 			foreach (AudioSource audioSource in audioSources) {
@@ -224,7 +225,6 @@ namespace ZombieRunner.Characters.FirstPerson
 
         private void GetInput(out float speed)
         {
-            bool idle = true;
             // Read input
             float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
             float vertical = CrossPlatformInputManager.GetAxis("Vertical");
@@ -283,9 +283,9 @@ namespace ZombieRunner.Characters.FirstPerson
 
         private IEnumerator Fire()
         {
+            player.PlayGunSound();
             animator.SetTrigger("T_idle_to_shoot");
-            //(Instantiate(bullet, bulletGripPoint.transform.position, Quaternion.identity) as Bullet).transform.parent = GameObject.Find("AmmoGripPoint").transform;
-
+            
             yield return new WaitForEndOfFrame();
         }
 

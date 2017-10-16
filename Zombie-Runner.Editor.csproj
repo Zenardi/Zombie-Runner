@@ -270,13 +270,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Zombie-Runner.Plugins.csproj">
-      <Project>{DCCA558B-698A-4A6D-141B-8CF74406E151}</Project>
-      <Name>Zombie-Runner.Plugins</Name>
-    </ProjectReference>
     <ProjectReference Include="Zombie-Runner.csproj">
       <Project>{C6BA35FC-D9CB-B255-C6B5-57764440C40B}</Project>
       <Name>Zombie-Runner</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zombie-Runner.Plugins.csproj">
+      <Project>{DCCA558B-698A-4A6D-141B-8CF74406E151}</Project>
+      <Name>Zombie-Runner.Plugins</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -294,10 +294,14 @@
     <Compile Include="Assets\Editor\ImageEffects\SunShaftsEditor.cs" />
     <Compile Include="Assets\Editor\ImageEffects\TonemappingEditor.cs" />
     <Compile Include="Assets\Editor\ImageEffects\VignetteAndChromaticAberrationEditor.cs" />
+    <Compile Include="Assets\RainMaker\Editor\RainMakerEditor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Mirza Beig\README - Inferno VFX.txt" />
     <None Include="Assets\Prefabs\Helicopter\Helicopter\Info.txt" />
     <None Include="Assets\Prefabs\Zombie_0_1\AnimationFrameTable\Zombie_0_1.txt" />
+    <None Include="Assets\RainMaker\Prefab\RainShader.shader" />
+    <None Include="Assets\RainMaker\Readme.txt" />
     <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />

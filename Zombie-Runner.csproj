@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -225,9 +227,34 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\DemoManager.cs" />
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\FollowMouse.cs" />
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\FPSDisplay.cs" />
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\FPSTest.cs" />
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\LoopingParticleSystemsManager.cs" />
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\MouseRotateCamera.cs" />
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\OneshotParticleSystemsManager.cs" />
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\ParticleManager.cs" />
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\AnimatedLight.cs" />
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\DestroyAfterTime.cs" />
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\DestroyOnParticlesDead.cs" />
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\DestroyOnTrailsDestroyed.cs" />
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\IgnoreTimeScale.cs" />
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\ParticleSystems.cs" />
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\ParticleSystemsSimulationSpeed.cs" />
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\PerlinNoise.cs" />
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\RendererSortingOrder.cs" />
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\Rotator.cs" />
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\TrailRenderers.cs" />
+    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\TransformNoise.cs" />
     <Compile Include="Assets\Prefabs\Zombie_0_1\Script\PlayGUI.cs" />
-    <Compile Include="Assets\Scripts\AICharacterControl.cs" />
-    <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\RainMaker\Demo\DemoScript.cs" />
+    <Compile Include="Assets\RainMaker\Demo\DemoScript2D.cs" />
+    <Compile Include="Assets\RainMaker\Demo\DemoScriptStartRainOnSpaceBar.cs" />
+    <Compile Include="Assets\RainMaker\Prefab\BaseRainScript.cs" />
+    <Compile Include="Assets\RainMaker\Prefab\RainCollision.cs" />
+    <Compile Include="Assets\RainMaker\Prefab\RainScript.cs" />
+    <Compile Include="Assets\RainMaker\Prefab\RainScript2D.cs" />
     <Compile Include="Assets\Scripts\ButtonHandler.cs" />
     <Compile Include="Assets\Scripts\ClearArea.cs" />
     <Compile Include="Assets\Scripts\CrossPlatformInputManager.cs" />
@@ -250,18 +277,19 @@
     <Compile Include="Assets\Scripts\RaycastShoot.cs" />
     <Compile Include="Assets\Scripts\RigidbodyFirstPersonController.cs" />
     <Compile Include="Assets\Scripts\SimpleMouseRotator.cs" />
-    <Compile Include="Assets\Scripts\ThirdPersonCharacter.cs" />
     <Compile Include="Assets\Scripts\TiltInput.cs" />
     <Compile Include="Assets\Scripts\TouchPad.cs" />
     <Compile Include="Assets\Scripts\VirtualInput.cs" />
-    <Compile Include="Assets\Scripts\Zombie.cs" />
-    <Compile Include="Assets\SMC Pack 1\Demo\Files\V_SMC_Camera.cs" />
-    <Compile Include="Assets\SMC Pack 1\Demo\Files\V_SMC_Handler.cs" />
-    <Compile Include="Assets\SMC Pack 1\Demo\Files\V_Text.cs" />
+    <Compile Include="Assets\Scripts\WaypointContainer.cs" />
+    <Compile Include="Assets\Scripts\ZombieCharacter.cs" />
+    <Compile Include="Assets\Scripts\ZombieAI.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Mirza Beig\README - Inferno VFX.txt" />
     <None Include="Assets\Prefabs\Helicopter\Helicopter\Info.txt" />
     <None Include="Assets\Prefabs\Zombie_0_1\AnimationFrameTable\Zombie_0_1.txt" />
+    <None Include="Assets\RainMaker\Prefab\RainShader.shader" />
+    <None Include="Assets\RainMaker\Readme.txt" />
     <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />

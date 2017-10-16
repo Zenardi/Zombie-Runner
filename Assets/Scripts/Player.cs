@@ -4,8 +4,11 @@ using System;
 
 public class Player : MonoBehaviour {
 
+    [SerializeField] AudioClip gunSFX;
+
 	public Transform playerSpawnPoints; // The parent of the spawn points
 	public GameObject landingAreaPrefab;
+    private AudioSource audioSource;
 
 	private bool reSpawn = false;
 	//private Transform[] spawnPoints;
@@ -14,6 +17,7 @@ public class Player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        audioSource = GetComponent<AudioSource>();
 		//spawnPoints = playerSpawnPoints.GetComponentsInChildren<Transform> ();
 	}
 	
@@ -47,6 +51,11 @@ public class Player : MonoBehaviour {
     public Vector3 GetLandingAreaLocation()
     {
         return landingArea;
+    }
+
+    public void PlayGunSound()
+    {
+        audioSource.PlayOneShot(gunSFX);
     }
 
 }
