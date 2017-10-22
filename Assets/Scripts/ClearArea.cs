@@ -9,17 +9,17 @@ public class ClearArea : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		timeSinceLastTrigger += Time.deltaTime;
+		//timeSinceLastTrigger += Time.deltaTime;
 
-		if (timeSinceLastTrigger > 1f && Time.realtimeSinceStartup > 10f && !foundClearArea) {
-			SendMessageUpwards ("OnFindClearArea");
-			foundClearArea = true;
-		}
+		//if (timeSinceLastTrigger > 1f && Time.realtimeSinceStartup > 10f && !foundClearArea) {
+		//	SendMessageUpwards ("OnFindClearArea");
+		//	foundClearArea = true;
+		//}
 	}
 
 	void OnTriggerStay (Collider collider) {
-		if (collider.tag != "Player") {
-			timeSinceLastTrigger = 0f;
-		}
+		//if (collider.tag != "Player") {
+		//	timeSinceLastTrigger = 0f;
+		//}
 	}
 }

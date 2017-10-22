@@ -5,7 +5,7 @@ public class InnerVoice : MonoBehaviour {
 
 	public AudioClip whatHappened;
 	public AudioClip goodLandingArea;
-
+    private RadioSystem radioSystem;
 	private AudioSource audioSource;
 
 	// Use this for initialization
@@ -13,18 +13,23 @@ public class InnerVoice : MonoBehaviour {
 		audioSource = GetComponent<AudioSource> ();
 		audioSource.clip = whatHappened;
 		audioSource.Play ();
+        radioSystem = GetComponent<RadioSystem>();
 	}
 	
-	void OnFindClearArea () {
-		print (name + " OnFindClearArea");
+	public void OnFindClearArea (Vector3 flarePosition) {
+        print (name + " OnFindClearArea");
 		audioSource.clip = goodLandingArea;
 		audioSource.Play ();
 
-		Invoke ("CallHeli", goodLandingArea.length + 1f);
-	}
+		//Invoke ("CallHeli", goodLandingArea.length + 1f);
+        //StartCoroutine(CallHeli());
+        radioSystem.OnMakeInitialHeliCall(flarePosition);
+    }
 
 	void CallHeli () {
-		SendMessageUpwards ("OnMakeInitialHeliCall");
-	}
+		//SendMessageUpwards ("OnMakeInitialHeliCall");
+        //radioSystem.OnMakeInitialHeliCall();
+
+    }
 
 }

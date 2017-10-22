@@ -31,6 +31,12 @@ namespace Zombie.Characters
         [SerializeField] float moveSpeedMultiplier = 0.7f;
         [SerializeField] float animationSpeedMultiplier = 1.7f;
         [SerializeField] float movingTurnSpeed = 360;
+
+        internal bool IsAlive()
+        {
+            return isAlive;
+        }
+
         [SerializeField] float stationaryTurnSpeed = 180;
         [SerializeField] float moveThreashold = 1f;
 
@@ -45,6 +51,7 @@ namespace Zombie.Characters
         float turnAmount;
         float m_ForwardAmount;
         bool isAlive = true;
+        int health = 3;
 
         private void Awake()
         {
@@ -76,6 +83,10 @@ namespace Zombie.Characters
             navMeshAgent.autoBraking = false;
         }
 
+        internal void UpdateAttackAnimationTrigger()
+        {
+            animator.SetTrigger("runToAttack1");
+        }
 
         private void Update()
         {
@@ -92,6 +103,9 @@ namespace Zombie.Characters
             {
                 Move(Vector3.zero);
             }
+
+            if (health <= 0)
+                isAlive = false;
         }
 
 
@@ -109,9 +123,19 @@ namespace Zombie.Characters
             }
         }
 
+        internal void PlayWoundAnimation()
+        {
+            animator.SetTrigger("runToWound");
+        }
+
         internal void Damage(int gunDamage)
         {
-            // throw new NotImplementedException();
+            health -= gunDamage;
+        }
+
+        public void PlayDeathAnimation()
+        {
+            animator.SetTrigger("death");
         }
 
         internal float GetAnimSpeedMultiplier()

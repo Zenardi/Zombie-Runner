@@ -21,62 +21,83 @@ namespace ZombieRunner.Characters
 
         Player player;
         //PlayerControl player;
-        ZombieCharacter character;
-        float currentWeaponRange = 4f;
+        ZombieCharacter zombie;
+        float currentWeaponRange = 2f;
         float distanceToPlayer;
         int nextwayPointIndex = 0;
 
         void Start()
         {
             player = GameObject.FindObjectOfType<Player>();
-            character = GetComponent<ZombieCharacter>();
+            zombie = GetComponent<ZombieCharacter>();
         }
 
         void Update()
         {
-            distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
-            //WeaponSystem weaponSystem = GetComponent<WeaponSystem>();
-           // currentWeaponRange = weaponSystem.GetCurrentWeapon().GetMaxAttackRange();
-            bool inWeaponCircle = distanceToPlayer <= currentWeaponRange;
-            bool inChaseRing = distanceToPlayer > currentWeaponRange && distanceToPlayer <= chaseRadius;
-            bool outsideChaseRing = distanceToPlayer > chaseRadius;
-
-            if (outsideChaseRing)
+            if(zombie.IsAlive())
             {
-                state = State.Patrolling;
+                distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
+                //WeaponSystem weaponSystem = GetComponent<WeaponSystem>();
+                // currentWeaponRange = weaponSystem.GetCurrentWeapon().GetMaxAttackRange();
+                bool inWeaponCircle = distanceToPlayer <= currentWeaponRange;
+                bool inChaseRing = distanceToPlayer > currentWeaponRange && distanceToPlayer <= chaseRadius;
+                bool outsideChaseRing = distanceToPlayer > chaseRadius;
 
-                //stop what we are doing
-                StopAllCoroutines();
+                if (outsideChaseRing)
+                {
+                    state = State.Patrolling;
 
-                //weaponSystem.StopAttacking();
+                    //stop what we are doing
+                    StopAllCoroutines();
 
-                //start patrolling
-                StartCoroutine(Patrol());
+                    //weaponSystem.StopAttacking();
 
+                    //start patrolling
+                    StartCoroutine(Patrol());
+
+                }
+
+                if (inChaseRing)
+                {
+                    //stop what we are doing
+                    StopAllCoroutines();
+
+                    // weaponSystem.StopAttacking();
+
+                    //chase player
+                    StartCoroutine(ChasePlayer());
+                }
+
+                if (inWeaponCircle)
+                {
+                    state = State.Attacking;
+                    //stop what we are doing
+                    StopAllCoroutines();
+
+                    StartCoroutine(Attack());
+                    //attack player
+                    //weaponSystem.AttackTarget(player.gameObject);
+
+                }
             }
-
-            if (inChaseRing)
+            else
             {
-                //stop what we are doing
-                StopAllCoroutines();
-
-               // weaponSystem.StopAttacking();
-
-                //chase player
-                StartCoroutine(ChasePlayer());
-            }
-
-            if (inWeaponCircle)
-            {
-                state = State.Attacking;
-                //stop what we are doing
-                StopAllCoroutines();
-
-                //attack player
-                //weaponSystem.AttackTarget(player.gameObject);
-
+                zombie.PlayDeathAnimation();
             }
         }
+
+        private IEnumerator Attack()
+        {
+            UpdateAttackAnimation();
+            //TODO implement player damage
+            yield return new WaitForEndOfFrame();
+        }
+
+        private void UpdateAttackAnimation()
+        {
+            zombie.UpdateAttackAnimationTrigger();
+        }
+        
 
         IEnumerator Patrol()
         {
@@ -85,7 +106,7 @@ namespace ZombieRunner.Characters
             while (patrolPath != null)
             {
                 Vector3 nextWaypointPos = patrolPath.transform.GetChild(nextwayPointIndex).position;
-                character.SetDestination(nextWaypointPos);
+                zombie.SetDestination(nextWaypointPos);
                 CycleWaypointWhenClose(nextWaypointPos);
                 yield return new WaitForSeconds(waypoinDwellTime);
             }
@@ -107,7 +128,7 @@ namespace ZombieRunner.Characters
             state = State.Chasing;
             while (distanceToPlayer >= currentWeaponRange)
             {
-                character.SetDestination(player.transform.position);
+                zombie.SetDestination(player.transform.position);
                 yield return new WaitForEndOfFrame();
             }
         }

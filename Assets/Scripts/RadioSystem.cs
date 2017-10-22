@@ -6,7 +6,7 @@ public class RadioSystem : MonoBehaviour {
 
 	public AudioClip initialHeliCall;
 	public AudioClip initialCallReply;
-
+    private Vector3 flarePosition;
 	private AudioSource audioSource;
     private Helicopter helicopter;
 
@@ -16,10 +16,11 @@ public class RadioSystem : MonoBehaviour {
         helicopter = FindObjectOfType<Helicopter>();
 	}
 	
-	void OnMakeInitialHeliCall () {
+	public void OnMakeInitialHeliCall (Vector3 pos) {
 		print (name + " OnMakeInitialHeliCall");
 		audioSource.clip = initialHeliCall;
 		audioSource.Play ();
+        flarePosition = pos;
 		Invoke ("InitialReply", initialHeliCall.length + 1f);
 	}
 
@@ -34,7 +35,7 @@ public class RadioSystem : MonoBehaviour {
 
     private IEnumerator DispathHelicopter()
     {
-        helicopter.OnDispatchHelicopter();
+        helicopter.OnDispatchHelicopter(flarePosition);
 
         yield return new WaitForEndOfFrame();
     }

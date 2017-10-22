@@ -297,6 +297,7 @@
     <Compile Include="Assets\RainMaker\Editor\RainMakerEditor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Foliage Free\Readme.txt" />
     <None Include="Assets\Mirza Beig\README - Inferno VFX.txt" />
     <None Include="Assets\Prefabs\Helicopter\Helicopter\Info.txt" />
     <None Include="Assets\Prefabs\Zombie_0_1\AnimationFrameTable\Zombie_0_1.txt" />

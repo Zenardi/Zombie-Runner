@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -281,10 +279,11 @@
     <Compile Include="Assets\Scripts\TouchPad.cs" />
     <Compile Include="Assets\Scripts\VirtualInput.cs" />
     <Compile Include="Assets\Scripts\WaypointContainer.cs" />
-    <Compile Include="Assets\Scripts\ZombieCharacter.cs" />
     <Compile Include="Assets\Scripts\ZombieAI.cs" />
+    <Compile Include="Assets\Scripts\ZombieCharacter.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Foliage Free\Readme.txt" />
     <None Include="Assets\Mirza Beig\README - Inferno VFX.txt" />
     <None Include="Assets\Prefabs\Helicopter\Helicopter\Info.txt" />
     <None Include="Assets\Prefabs\Zombie_0_1\AnimationFrameTable\Zombie_0_1.txt" />

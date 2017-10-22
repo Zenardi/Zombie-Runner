@@ -5,13 +5,15 @@ using Zombie.Characters;
 
 public class RaycastShoot : MonoBehaviour {
 
-    public int gunDamage = 1;                                           // Set the number of hitpoints that this gun will take away from shot objects with a health script
+    public int gunDamage = 10;                                           // Set the number of hitpoints that this gun will take away from shot objects with a health script
     public float fireRate = 0.25f;                                      // Number in seconds which controls how often the player can fire
     public float weaponRange = 50f;                                     // Distance in Unity units over which the player can fire
     public float hitForce = 1f;                                       // Amount of force which will be added to objects with a rigidbody shot by the player
     public Transform gunEnd;                                            // Holds a reference to the gun end object, marking the muzzle location of the gun
 
     [SerializeField] private Camera fpsCam;                                              // Holds a reference to the first person camera
+
+    //TODO Mover para Classe que faz Input.GetButtonDown(0)
     private WaitForSeconds shotDuration = new WaitForSeconds(10f);    // WaitForSeconds object used by our ShotEffect coroutine, determines time laser line will remain visible
     private AudioSource gunAudio;                                       // Reference to the audio source which will play our shooting sound effect
     private LineRenderer laserLine;                                     // Reference to the LineRenderer component which will display our laserline
@@ -66,6 +68,7 @@ public class RaycastShoot : MonoBehaviour {
                     Debug.Log("Zombie Hit!");
                     // Call the damage function of that script, passing in our gunDamage variable
                     health.Damage(gunDamage);
+                    health.PlayWoundAnimation();
                 }
 
                 // Check if the object we hit has a rigidbody attached
