@@ -65,7 +65,7 @@ public class RaycastShoot : MonoBehaviour {
                 // If there was a health script attached
                 if (health != null)
                 {
-                    Debug.Log("Zombie Hit!");
+                    //Debug.Log("Zombie Hit!");
                     // Call the damage function of that script, passing in our gunDamage variable
                     health.Damage(gunDamage);
                     health.PlayWoundAnimation();

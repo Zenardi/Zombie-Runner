@@ -90,22 +90,30 @@ namespace Zombie.Characters
 
         private void Update()
         {
-            if (!navMeshAgent.isOnNavMesh)
+            if(isAlive)
             {
-                Debug.LogError(gameObject.name + " not a nav mesh");
-            }
+                if (!navMeshAgent.isOnNavMesh)
+                {
+                    Debug.LogError(gameObject.name + " not a nav mesh");
+                }
 
-            if (navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance && isAlive)
-            {
-                Move(navMeshAgent.desiredVelocity);
+                if (navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance && isAlive)
+                {
+                    Move(navMeshAgent.desiredVelocity);
+                }
+                else
+                {
+                    
+                }
             }
             else
             {
                 Move(Vector3.zero);
             }
 
-            if (health <= 0)
-                isAlive = false;
+            if (health <= 0) isAlive = false;
+            
+                
         }
 
 

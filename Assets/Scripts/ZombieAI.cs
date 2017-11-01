@@ -83,7 +83,16 @@ namespace ZombieRunner.Characters
             else
             {
                 zombie.PlayDeathAnimation();
+
+                Invoke("DestroyZombie", 3);
+                
+
             }
+        }
+
+        private void DestroyZombie()
+        {
+            Destroy(this.gameObject);
         }
 
         private IEnumerator Attack()

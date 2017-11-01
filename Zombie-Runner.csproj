@@ -274,8 +274,10 @@
     <Compile Include="Assets\Scripts\RadioSystem.cs" />
     <Compile Include="Assets\Scripts\RaycastShoot.cs" />
     <Compile Include="Assets\Scripts\RigidbodyFirstPersonController.cs" />
+    <Compile Include="Assets\Scripts\SafeArea.cs" />
     <Compile Include="Assets\Scripts\SimpleMouseRotator.cs" />
     <Compile Include="Assets\Scripts\TiltInput.cs" />
+    <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\TouchPad.cs" />
     <Compile Include="Assets\Scripts\VirtualInput.cs" />
     <Compile Include="Assets\Scripts\WaypointContainer.cs" />
