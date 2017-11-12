@@ -1,8 +1,9 @@
 using System;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 using ZombieRunner.CrossPlatformInput;
 
-namespace ZombieRunner.Utility
+namespace UnityStandardAssets.Utility
 {
     public class SimpleMouseRotator : MonoBehaviour
     {

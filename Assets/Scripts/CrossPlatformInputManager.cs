@@ -22,16 +22,16 @@ namespace ZombieRunner.CrossPlatformInput
 
 		static CrossPlatformInputManager()
 		{
-			s_TouchInput = new MobileInput();
-			s_HardwareInput = new StandaloneInput();
+            s_TouchInput = new MobileInput();
+            s_HardwareInput = new StandaloneInput();
 #if MOBILE_INPUT
             activeInput = s_TouchInput;
 #else
-			activeInput = s_HardwareInput;
+            activeInput = s_HardwareInput;
 #endif
-		}
+        }
 
-		public static void SwitchActiveInputMethod(ActiveInputMethod activeInputMethod)
+        public static void SwitchActiveInputMethod(ActiveInputMethod activeInputMethod)
 		{
 			switch (activeInputMethod)
 			{
@@ -57,13 +57,13 @@ namespace ZombieRunner.CrossPlatformInput
 
 		public static void RegisterVirtualAxis(VirtualAxis axis)
 		{
-			//activeInput.RegisterVirtualAxis(axis);
+			activeInput.RegisterVirtualAxis(axis);
 		}
 
 
 		public static void RegisterVirtualButton(VirtualButton button)
 		{
-			//activeInput.RegisterVirtualButton(button);
+			activeInput.RegisterVirtualButton(button);
 		}
 
 

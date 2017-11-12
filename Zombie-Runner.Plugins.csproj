@@ -268,13 +268,13 @@
     <Compile Include="Assets\Standard Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Foliage Free\Readme.txt" />
-    <None Include="Assets\Mirza Beig\README - Inferno VFX.txt" />
-    <None Include="Assets\PS-ProgressBar\readme.txt" />
-    <None Include="Assets\Prefabs\Helicopter\Helicopter\Info.txt" />
-    <None Include="Assets\Prefabs\Zombie_0_1\AnimationFrameTable\Zombie_0_1.txt" />
-    <None Include="Assets\RainMaker\Prefab\RainShader.shader" />
-    <None Include="Assets\RainMaker\Readme.txt" />
+    <None Include="Assets\Enviriorment\Foliage Free\Readme.txt" />
+    <None Include="Assets\Enviriorment\Mirza Beig\README - Inferno VFX.txt" />
+    <None Include="Assets\Enviriorment\RainMaker\Prefab\RainShader.shader" />
+    <None Include="Assets\Enviriorment\RainMaker\Readme.txt" />
+    <None Include="Assets\HUD\PS-ProgressBar\readme.txt" />
+    <None Include="Assets\HUD\font\zombie\read_this.txt" />
+    <None Include="Assets\HUD\font\zombie_control\zombiecontrol.txt" />
     <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
@@ -356,6 +356,8 @@
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
+    <None Include="Assets\_Prefabs\Helicopter\Helicopter\Info.txt" />
+    <None Include="Assets\_Prefabs\Zombie_0_1\AnimationFrameTable\Zombie_0_1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

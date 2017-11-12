@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -227,50 +225,74 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\DemoManager.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\FollowMouse.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\FPSDisplay.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\FPSTest.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\LoopingParticleSystemsManager.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\MouseRotateCamera.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\OneshotParticleSystemsManager.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\ParticleManager.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\AnimatedLight.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\DestroyAfterTime.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\DestroyOnParticlesDead.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\DestroyOnTrailsDestroyed.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\IgnoreTimeScale.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\ParticleSystems.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\ParticleSystemsSimulationSpeed.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\PerlinNoise.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\RendererSortingOrder.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\Rotator.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\TrailRenderers.cs" />
-    <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\TransformNoise.cs" />
-    <Compile Include="Assets\Prefabs\Zombie_0_1\Script\PlayGUI.cs" />
-    <Compile Include="Assets\PS-ProgressBar\Examples\Scripts\AssetStoreLink.cs" />
-    <Compile Include="Assets\PS-ProgressBar\Examples\Scripts\TestBarControl.cs" />
-    <Compile Include="Assets\PS-ProgressBar\Examples\Scripts\TestPageSwitch.cs" />
-    <Compile Include="Assets\PS-ProgressBar\Examples\Scripts\TestSwitchBar.cs" />
-    <Compile Include="Assets\PS-ProgressBar\Scripts\BarViewColor.cs" />
-    <Compile Include="Assets\PS-ProgressBar\Scripts\BarViewColorWhileMoving.cs" />
-    <Compile Include="Assets\PS-ProgressBar\Scripts\BarViewPosAnchors.cs" />
-    <Compile Include="Assets\PS-ProgressBar\Scripts\BarViewPosImageFill.cs" />
-    <Compile Include="Assets\PS-ProgressBar\Scripts\BarViewSizeAnchors.cs" />
-    <Compile Include="Assets\PS-ProgressBar\Scripts\BarViewSizeAnchorsShadow.cs" />
-    <Compile Include="Assets\PS-ProgressBar\Scripts\BarViewSizeImageFill.cs" />
-    <Compile Include="Assets\PS-ProgressBar\Scripts\BarViewValueText.cs" />
-    <Compile Include="Assets\PS-ProgressBar\Scripts\ProgressBarPro.cs" />
-    <Compile Include="Assets\PS-ProgressBar\Scripts\ProgressBarProView.cs" />
-    <Compile Include="Assets\PS-ProgressBar\Scripts\Utils\ImageSlicedMirror.cs" />
-    <Compile Include="Assets\PS-ProgressBar\Scripts\Utils\Utils.cs" />
-    <Compile Include="Assets\RainMaker\Demo\DemoScript.cs" />
-    <Compile Include="Assets\RainMaker\Demo\DemoScript2D.cs" />
-    <Compile Include="Assets\RainMaker\Demo\DemoScriptStartRainOnSpaceBar.cs" />
-    <Compile Include="Assets\RainMaker\Prefab\BaseRainScript.cs" />
-    <Compile Include="Assets\RainMaker\Prefab\RainCollision.cs" />
-    <Compile Include="Assets\RainMaker\Prefab\RainScript.cs" />
-    <Compile Include="Assets\RainMaker\Prefab\RainScript2D.cs" />
+    <Compile Include="Assets\_Prefabs\Zombie_0_1\Script\PlayGUI.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\EasyAudioUtility\EasyAudioUtility.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\EasyAudioUtility\EasyAudioUtility_Helper.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\EasyInputUtility\Scripts\EasyInputUtility.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\EasyInputUtility\Scripts\EIU_AxisBase.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\EasyInputUtility\Scripts\EIU_AxisButton.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\EasyInputUtility\Scripts\EIU_ControlsMenu.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\EasyInputUtility\Scripts\EIU_DebugItem.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\EasyInputUtility\Scripts\EIU_DebugWindow.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\EasyInputUtility\Scripts\EIU_RebindButton.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\inGame Scripts\LoadGame Scripts\LoadSlotIdentifier.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\inGame Scripts\PauseMenu\PauseMenuOptions.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\inGame Scripts\PauseMenu\UIController.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\inGame Scripts\SaveGame Scripts\LoadGameManager.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\inGame Scripts\SaveGame Scripts\SaveGameTrigger.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\inGame Scripts\SaveGame Scripts\SaveGameUI.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\inGame Scripts\SaveGame Scripts\SaveSlotIdentifier.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\Loading Screen Scripts\Fader.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\Loading Screen Scripts\LoadingScreen.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\Main Menu Scripts\LevelSelectItem.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\Main Menu Scripts\LevelSelectManager.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\Main Menu Scripts\MainMenuController.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\Main Menu Scripts\OptionsController_Game.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\Main Menu Scripts\OptionsController_Graphics.cs" />
+    <Compile Include="Assets\_Scenes\MainMenu\Scripts\SimpleCube\SimpleCube.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\DemoManager.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\FollowMouse.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\FPSDisplay.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\FPSTest.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\LoopingParticleSystemsManager.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\MouseRotateCamera.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\OneshotParticleSystemsManager.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\ParticleManager.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\AnimatedLight.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\DestroyAfterTime.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\DestroyOnParticlesDead.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\DestroyOnTrailsDestroyed.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\IgnoreTimeScale.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\ParticleSystems.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\ParticleSystemsSimulationSpeed.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\PerlinNoise.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\RendererSortingOrder.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\Rotator.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\TrailRenderers.cs" />
+    <Compile Include="Assets\Enviriorment\Mirza Beig\Particle Systems\_Common\Scripts\TransformNoise.cs" />
+    <Compile Include="Assets\Enviriorment\RainMaker\Demo\DemoScript.cs" />
+    <Compile Include="Assets\Enviriorment\RainMaker\Demo\DemoScript2D.cs" />
+    <Compile Include="Assets\Enviriorment\RainMaker\Demo\DemoScriptStartRainOnSpaceBar.cs" />
+    <Compile Include="Assets\Enviriorment\RainMaker\Prefab\BaseRainScript.cs" />
+    <Compile Include="Assets\Enviriorment\RainMaker\Prefab\RainCollision.cs" />
+    <Compile Include="Assets\Enviriorment\RainMaker\Prefab\RainScript.cs" />
+    <Compile Include="Assets\Enviriorment\RainMaker\Prefab\RainScript2D.cs" />
+    <Compile Include="Assets\HUD\PS-ProgressBar\Examples\Scripts\AssetStoreLink.cs" />
+    <Compile Include="Assets\HUD\PS-ProgressBar\Examples\Scripts\TestBarControl.cs" />
+    <Compile Include="Assets\HUD\PS-ProgressBar\Examples\Scripts\TestPageSwitch.cs" />
+    <Compile Include="Assets\HUD\PS-ProgressBar\Examples\Scripts\TestSwitchBar.cs" />
+    <Compile Include="Assets\HUD\PS-ProgressBar\Scripts\BarViewColor.cs" />
+    <Compile Include="Assets\HUD\PS-ProgressBar\Scripts\BarViewColorWhileMoving.cs" />
+    <Compile Include="Assets\HUD\PS-ProgressBar\Scripts\BarViewPosAnchors.cs" />
+    <Compile Include="Assets\HUD\PS-ProgressBar\Scripts\BarViewPosImageFill.cs" />
+    <Compile Include="Assets\HUD\PS-ProgressBar\Scripts\BarViewSizeAnchors.cs" />
+    <Compile Include="Assets\HUD\PS-ProgressBar\Scripts\BarViewSizeAnchorsShadow.cs" />
+    <Compile Include="Assets\HUD\PS-ProgressBar\Scripts\BarViewSizeImageFill.cs" />
+    <Compile Include="Assets\HUD\PS-ProgressBar\Scripts\BarViewValueText.cs" />
+    <Compile Include="Assets\HUD\PS-ProgressBar\Scripts\ProgressBarPro.cs" />
+    <Compile Include="Assets\HUD\PS-ProgressBar\Scripts\ProgressBarProView.cs" />
+    <Compile Include="Assets\HUD\PS-ProgressBar\Scripts\Utils\ImageSlicedMirror.cs" />
+    <Compile Include="Assets\HUD\PS-ProgressBar\Scripts\Utils\Utils.cs" />
     <Compile Include="Assets\Scripts\ButtonHandler.cs" />
     <Compile Include="Assets\Scripts\ClearArea.cs" />
     <Compile Include="Assets\Scripts\CrossPlatformInputManager.cs" />
@@ -282,7 +304,6 @@
     <Compile Include="Assets\Scripts\Helicopter.cs" />
     <Compile Include="Assets\Scripts\InnerVoice.cs" />
     <Compile Include="Assets\Scripts\InputAxisScrollbar.cs" />
-    <Compile Include="Assets\Scripts\Joystick.cs" />
     <Compile Include="Assets\Scripts\LerpControlledBob.cs" />
     <Compile Include="Assets\Scripts\MobileControlRig.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
@@ -305,13 +326,13 @@
     <Compile Include="Assets\Scripts\ZombieCharacter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Foliage Free\Readme.txt" />
-    <None Include="Assets\Mirza Beig\README - Inferno VFX.txt" />
-    <None Include="Assets\PS-ProgressBar\readme.txt" />
-    <None Include="Assets\Prefabs\Helicopter\Helicopter\Info.txt" />
-    <None Include="Assets\Prefabs\Zombie_0_1\AnimationFrameTable\Zombie_0_1.txt" />
-    <None Include="Assets\RainMaker\Prefab\RainShader.shader" />
-    <None Include="Assets\RainMaker\Readme.txt" />
+    <None Include="Assets\Enviriorment\Foliage Free\Readme.txt" />
+    <None Include="Assets\Enviriorment\Mirza Beig\README - Inferno VFX.txt" />
+    <None Include="Assets\Enviriorment\RainMaker\Prefab\RainShader.shader" />
+    <None Include="Assets\Enviriorment\RainMaker\Readme.txt" />
+    <None Include="Assets\HUD\PS-ProgressBar\readme.txt" />
+    <None Include="Assets\HUD\font\zombie\read_this.txt" />
+    <None Include="Assets\HUD\font\zombie_control\zombiecontrol.txt" />
     <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
@@ -393,6 +414,8 @@
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
+    <None Include="Assets\_Prefabs\Helicopter\Helicopter\Info.txt" />
+    <None Include="Assets\_Prefabs\Zombie_0_1\AnimationFrameTable\Zombie_0_1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

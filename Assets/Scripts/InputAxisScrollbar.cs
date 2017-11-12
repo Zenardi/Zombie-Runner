@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ZombieRunner.CrossPlatformInput
 {
-    public class ZombieRunner : MonoBehaviour
+    public class InputAxisScrollbar : MonoBehaviour
     {
         public string axis;
 
