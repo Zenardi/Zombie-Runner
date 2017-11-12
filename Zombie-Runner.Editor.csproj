@@ -294,11 +294,14 @@
     <Compile Include="Assets\Editor\ImageEffects\SunShaftsEditor.cs" />
     <Compile Include="Assets\Editor\ImageEffects\TonemappingEditor.cs" />
     <Compile Include="Assets\Editor\ImageEffects\VignetteAndChromaticAberrationEditor.cs" />
+    <Compile Include="Assets\PS-ProgressBar\Scripts\Editor\BarViewColorDrawer.cs" />
+    <Compile Include="Assets\PS-ProgressBar\Scripts\Editor\ProgressBarProDrawer.cs" />
     <Compile Include="Assets\RainMaker\Editor\RainMakerEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Foliage Free\Readme.txt" />
     <None Include="Assets\Mirza Beig\README - Inferno VFX.txt" />
+    <None Include="Assets\PS-ProgressBar\readme.txt" />
     <None Include="Assets\Prefabs\Helicopter\Helicopter\Info.txt" />
     <None Include="Assets\Prefabs\Zombie_0_1\AnimationFrameTable\Zombie_0_1.txt" />
     <None Include="Assets\RainMaker\Prefab\RainShader.shader" />

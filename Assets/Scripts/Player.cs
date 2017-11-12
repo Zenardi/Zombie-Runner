@@ -2,6 +2,7 @@
 using System.Collections;
 using System;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
@@ -12,7 +13,7 @@ public class Player : MonoBehaviour {
 	public GameObject landingAreaPrefab;
     private AudioSource audioSource;
     private InnerVoice innerVoice;
-
+    private bool isAlive = true;
 	private bool reSpawn = false;
 	//private Transform[] spawnPoints;
 	private bool lastRespawnToggle = false;
@@ -20,9 +21,10 @@ public class Player : MonoBehaviour {
     [SerializeField] private Timer timer;
     [SerializeField] private Text firstObjective;
     [SerializeField] private Text secongObjective;
+    [SerializeField] private ProgressBarPro healthBar;
 
-
-
+    private float health = 100;
+    bool alreadyDropped = false;
 
     // Use this for initialization
     void Start () {
@@ -44,7 +46,7 @@ public class Player : MonoBehaviour {
             UpdateTimerHud();
 
         ///TODO verify landing area location (colision with trees)
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && !alreadyDropped)
         {
             Debug.Log("key f pressed. droping flare");
             var p = Instantiate(FlarePrefab, this.transform.position, Quaternion.identity);
@@ -53,12 +55,37 @@ public class Player : MonoBehaviour {
 
             firstObjective.GetComponent<Text>().text += " - <Done>";
             secongObjective.GetComponent<Text>().enabled = true;
+
+            alreadyDropped = true;
         }
+
+        StartCoroutine(IsTimesUp());    
 	}
+
+    private IEnumerator IsTimesUp()
+    {
+        if(timer.TimesUp())
+        {
+            StopAllCoroutines();
+            LoadWinScene();
+        }
+
+        yield return new WaitForEndOfFrame();
+    }
+
+    private void LoadWinScene()
+    {
+        SceneManager.LoadScene("Win");
+    }
 
     private void UpdateTimerHud()
     {
         timer.GetComponent<Text>().text = timer.GetTimeLeft();
+    }
+
+    internal void Kill()
+    {
+        isAlive = false;
     }
 
     public void OnFindClearArea () {
@@ -112,5 +139,10 @@ public class Player : MonoBehaviour {
         {
             timer.PauseTimer();
         }
+    }
+
+    internal void Damage(int v)
+    {
+        healthBar.Value -= v;
     }
 }

@@ -2289,13 +2289,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunSFX: {fileID: 8300000, guid: c7be2d352c4dbc548b2ac8d59aa06f3e, type: 3}
-  FlarePrefab: {fileID: 0}
+  FlarePrefab: {fileID: 188770, guid: a1b77e391f429ff4a837ddb91813e57a, type: 2}
   playerSpawnPoints: {fileID: 0}
   landingAreaPrefab: {fileID: 1920017894558302}
   landingArea: {x: 0, y: 0, z: 0}
   timer: {fileID: 0}
   firstObjective: {fileID: 0}
   secongObjective: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!114 &114586036502895420
 MonoBehaviour:
   m_ObjectHideFlags: 1

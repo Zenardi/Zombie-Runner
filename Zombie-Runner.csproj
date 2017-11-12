@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -246,6 +248,22 @@
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\TrailRenderers.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\TransformNoise.cs" />
     <Compile Include="Assets\Prefabs\Zombie_0_1\Script\PlayGUI.cs" />
+    <Compile Include="Assets\PS-ProgressBar\Examples\Scripts\AssetStoreLink.cs" />
+    <Compile Include="Assets\PS-ProgressBar\Examples\Scripts\TestBarControl.cs" />
+    <Compile Include="Assets\PS-ProgressBar\Examples\Scripts\TestPageSwitch.cs" />
+    <Compile Include="Assets\PS-ProgressBar\Examples\Scripts\TestSwitchBar.cs" />
+    <Compile Include="Assets\PS-ProgressBar\Scripts\BarViewColor.cs" />
+    <Compile Include="Assets\PS-ProgressBar\Scripts\BarViewColorWhileMoving.cs" />
+    <Compile Include="Assets\PS-ProgressBar\Scripts\BarViewPosAnchors.cs" />
+    <Compile Include="Assets\PS-ProgressBar\Scripts\BarViewPosImageFill.cs" />
+    <Compile Include="Assets\PS-ProgressBar\Scripts\BarViewSizeAnchors.cs" />
+    <Compile Include="Assets\PS-ProgressBar\Scripts\BarViewSizeAnchorsShadow.cs" />
+    <Compile Include="Assets\PS-ProgressBar\Scripts\BarViewSizeImageFill.cs" />
+    <Compile Include="Assets\PS-ProgressBar\Scripts\BarViewValueText.cs" />
+    <Compile Include="Assets\PS-ProgressBar\Scripts\ProgressBarPro.cs" />
+    <Compile Include="Assets\PS-ProgressBar\Scripts\ProgressBarProView.cs" />
+    <Compile Include="Assets\PS-ProgressBar\Scripts\Utils\ImageSlicedMirror.cs" />
+    <Compile Include="Assets\PS-ProgressBar\Scripts\Utils\Utils.cs" />
     <Compile Include="Assets\RainMaker\Demo\DemoScript.cs" />
     <Compile Include="Assets\RainMaker\Demo\DemoScript2D.cs" />
     <Compile Include="Assets\RainMaker\Demo\DemoScriptStartRainOnSpaceBar.cs" />
@@ -259,8 +277,8 @@
     <Compile Include="Assets\Scripts\CurveControlledBob.cs" />
     <Compile Include="Assets\Scripts\Daycycle.cs" />
     <Compile Include="Assets\Scripts\Eyes.cs" />
-    <Compile Include="Assets\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Scripts\FOVKick.cs" />
+    <Compile Include="Assets\Scripts\HealthSystem.cs" />
     <Compile Include="Assets\Scripts\Helicopter.cs" />
     <Compile Include="Assets\Scripts\InnerVoice.cs" />
     <Compile Include="Assets\Scripts\InputAxisScrollbar.cs" />
@@ -271,10 +289,12 @@
     <Compile Include="Assets\Scripts\PlatformSpecific\MobileInput.cs" />
     <Compile Include="Assets\Scripts\PlatformSpecific\StandaloneInput.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\RadioSystem.cs" />
     <Compile Include="Assets\Scripts\RaycastShoot.cs" />
     <Compile Include="Assets\Scripts\RigidbodyFirstPersonController.cs" />
     <Compile Include="Assets\Scripts\SafeArea.cs" />
+    <Compile Include="Assets\Scripts\Scene Manager\ZombieSceneManager.cs" />
     <Compile Include="Assets\Scripts\SimpleMouseRotator.cs" />
     <Compile Include="Assets\Scripts\TiltInput.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
@@ -287,6 +307,7 @@
   <ItemGroup>
     <None Include="Assets\Foliage Free\Readme.txt" />
     <None Include="Assets\Mirza Beig\README - Inferno VFX.txt" />
+    <None Include="Assets\PS-ProgressBar\readme.txt" />
     <None Include="Assets\Prefabs\Helicopter\Helicopter\Info.txt" />
     <None Include="Assets\Prefabs\Zombie_0_1\AnimationFrameTable\Zombie_0_1.txt" />
     <None Include="Assets\RainMaker\Prefab\RainShader.shader" />

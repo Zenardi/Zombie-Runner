@@ -56,6 +56,7 @@ namespace Zombie.Characters
         private void Awake()
         {
             AddRequiredComponents();
+            
         }
 
         private void AddRequiredComponents()
@@ -86,6 +87,7 @@ namespace Zombie.Characters
         internal void UpdateAttackAnimationTrigger()
         {
             animator.SetTrigger("runToAttack1");
+            
         }
 
         private void Update()

@@ -59,7 +59,7 @@ public class RaycastShoot : MonoBehaviour {
                 // Set the end position for our laser line 
                 laserLine.SetPosition(1, hit.point);
 
-                // Get a reference to a health script attached to the collider we hit
+                // Get a reference to a zombie script attached to the collider we hit
                 ZombieCharacter health = hit.collider.GetComponent<ZombieCharacter>();
 
                 // If there was a health script attached
@@ -72,7 +72,7 @@ public class RaycastShoot : MonoBehaviour {
                 }
 
                 // Check if the object we hit has a rigidbody attached
-                if (hit.rigidbody != null)
+                if (hit.rigidbody != null && !hit.collider.GetComponent<Helicopter>())
                 {
                     // Add force to the rigidbody we hit, in the direction from which it was hit
                     hit.rigidbody.AddForce(-hit.normal * hitForce);

@@ -17,7 +17,6 @@ public class Timer : MonoBehaviour {
         if(!pause)
         {
             timeLeft -= Time.deltaTime;
-            Debug.Log("time left = " + timeLeft.ToString());
             if (timeLeft < 0)
             {
                 timeLeft = 0;
@@ -44,5 +43,13 @@ public class Timer : MonoBehaviour {
     public bool IsTimerPaused()
     {
         return pause;
+    }
+
+    public bool TimesUp()
+    {
+        if (timeLeft <= 0)
+            return true;
+        else
+            return false;
     }
 }

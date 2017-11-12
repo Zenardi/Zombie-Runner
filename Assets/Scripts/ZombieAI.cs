@@ -14,7 +14,7 @@ namespace ZombieRunner.Characters
         [SerializeField] WaypointContainer patrolPath;
         [SerializeField] float waypointTolerance = 2.0f;
         [SerializeField] float waypoinDwellTime = 2.0f;
-
+        [SerializeField] float baseDamage = 10f;
 
         enum State { Idle, Attacking, Patrolling, Chasing }
         State state = State.Idle;
@@ -25,11 +25,14 @@ namespace ZombieRunner.Characters
         float currentWeaponRange = 2f;
         float distanceToPlayer;
         int nextwayPointIndex = 0;
+        float lastHitTime = 0;
+        Animator animator;
 
         void Start()
         {
             player = GameObject.FindObjectOfType<Player>();
             zombie = GetComponent<ZombieCharacter>();
+            animator = GetComponent<Animator>();
         }
 
         void Update()
@@ -97,9 +100,49 @@ namespace ZombieRunner.Characters
 
         private IEnumerator Attack()
         {
+            bool attackerStillAlive = GetComponent<HealthSystem>().healthAsPercentage >= Mathf.Epsilon;
+            bool targetStillAlive = player.GetComponent<HealthSystem>().healthAsPercentage >= Mathf.Epsilon;
+
+            while (attackerStillAlive && targetStillAlive)
+            {
+                //var animationClip = animator.GetAnimClip();
+                //float animationClipTime = animationClip.length / character.GetAnimSpeedMultiplier();
+                float timeToWait = 2;//animationClipTime + currentWeaponConfig.GetTimeBetweenCycles();
+
+                bool isTimeToHitAgain = Time.time - lastHitTime > timeToWait;
+
+                if (isTimeToHitAgain)
+                {
+                    AttackTargetOnce();
+                    lastHitTime = Time.time;
+                }
+                yield return new WaitForSeconds(timeToWait);
+            }
+
+        }
+
+        private void AttackTargetOnce()
+        {
+            transform.LookAt(player.transform);
             UpdateAttackAnimation();
-            //TODO implement player damage
-            yield return new WaitForEndOfFrame();
+            float damageDelay = 0.1f;//currentWeaponConfig.GetDamageDelay();
+            
+            StartCoroutine(DamageAfterDelay(damageDelay));
+        }
+
+        private IEnumerator DamageAfterDelay(float damageDelay)
+        {
+            player.GetComponent<HealthSystem>().TakeDamage(CalculateDamage());
+            yield return new WaitForSecondsRealtime(damageDelay);
+            
+            
+            
+            
+        }
+
+        private float CalculateDamage()
+        {
+            return baseDamage;
         }
 
         private void UpdateAttackAnimation()
