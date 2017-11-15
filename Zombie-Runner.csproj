@@ -304,6 +304,7 @@
     <Compile Include="Assets\Scripts\Helicopter.cs" />
     <Compile Include="Assets\Scripts\InnerVoice.cs" />
     <Compile Include="Assets\Scripts\InputAxisScrollbar.cs" />
+    <Compile Include="Assets\Scripts\LandingZone.cs" />
     <Compile Include="Assets\Scripts\LerpControlledBob.cs" />
     <Compile Include="Assets\Scripts\MobileControlRig.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
@@ -320,6 +321,7 @@
     <Compile Include="Assets\Scripts\TiltInput.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\TouchPad.cs" />
+    <Compile Include="Assets\Scripts\Tree.cs" />
     <Compile Include="Assets\Scripts\VirtualInput.cs" />
     <Compile Include="Assets\Scripts\WaypointContainer.cs" />
     <Compile Include="Assets\Scripts\ZombieAI.cs" />

@@ -3,39 +3,29 @@ using System.Collections;
 
 public class ClearArea : MonoBehaviour {
 
+    [SerializeField]
 	public float timeSinceLastTrigger = 0f;
     private Player _player;
 	private bool foundClearArea = false;
 
     private void Start()
     {
-        _player = GetComponent<Player>();
+        _player = FindObjectOfType<Player>();
     }
 
     // Update is called once per frame
     void Update () {
-        //timeSinceLastTrigger += Time.deltaTime;
+        timeSinceLastTrigger += Time.deltaTime;
 
-        //if (timeSinceLastTrigger > 1f && Time.realtimeSinceStartup > 10f && !foundClearArea)
-        //{
-        //    _player.OnFindClearArea();
-        //    //SendMessageUpwards("OnFindClearArea");
-        //    foundClearArea = true;
-        //}
+        if (timeSinceLastTrigger > 1f && Time.realtimeSinceStartup > 10f && !foundClearArea)
+        {
+            _player.OnFindClearArea();
+            //SendMessageUpwards("OnFindClearArea");
+            foundClearArea = true;
+        }
     }
 
-	void OnTriggerStay (Collider collider) {
-
-        //var a = collider.GetComponent<Player>();
-        //if (a != null)
-        //{
-        //    Debug.Log("StarTimer - Trigger Stay Heli");
-
-        //}
-    }
-
-    private void OnTriggerEnter(Collider collider)
-    {
-
+	void OnTriggerStay () {
+        timeSinceLastTrigger = 0;
     }
 }

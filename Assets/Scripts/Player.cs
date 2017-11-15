@@ -25,7 +25,7 @@ public class Player : MonoBehaviour {
 
     private float health = 100;
     bool alreadyDropped = false;
-
+    bool lz = false;
     // Use this for initialization
     void Start () {
         Cursor.visible = false;
@@ -48,15 +48,18 @@ public class Player : MonoBehaviour {
         ///TODO verify landing area location (colision with trees)
         if (Input.GetKeyDown(KeyCode.F) && !alreadyDropped)
         {
-            Debug.Log("key f pressed. droping flare");
-            var p = Instantiate(FlarePrefab, this.transform.position, Quaternion.identity);
-            p.SetActive(true);
-            innerVoice.OnFindClearArea(p.transform.position);
+            if(lz)
+            {
+                Debug.Log("key f pressed. droping flare");
+                var p = Instantiate(FlarePrefab, this.transform.position, Quaternion.identity);
+                p.SetActive(true);
+                innerVoice.OnFindClearArea(p.transform.position);
 
-            firstObjective.GetComponent<Text>().text += " - <Done>";
-            secongObjective.GetComponent<Text>().enabled = true;
+                firstObjective.GetComponent<Text>().text += " - <Done>";
+                secongObjective.GetComponent<Text>().enabled = true;
 
-            alreadyDropped = true;
+                alreadyDropped = true;
+            }
         }
 
         StartCoroutine(IsTimesUp());    
@@ -89,8 +92,12 @@ public class Player : MonoBehaviour {
     }
 
     public void OnFindClearArea () {
-		//Invoke ("DropFlare", 3f);
-        StartCoroutine(DropFlare());
+        //Invoke ("DropFlare", 3f);
+        lz = true;
+        //Debug.Log("lz true");
+
+        //if(lz)
+        //    StartCoroutine(DropFlare());
 
     }
 
@@ -114,28 +121,33 @@ public class Player : MonoBehaviour {
 
     private void OnTriggerEnter(Collider collider)
     {
+
         var a = collider.GetComponentInChildren<SafeArea>();
-        if (a != null)
+
+        if (a)
         {
             timer.GetComponent<Text>().enabled = true;
             timer.StartTimer();
         }
+        
+
     }
 
     private void OnTriggerStay(Collider other)
     {
         var a = other.GetComponentInChildren<SafeArea>();
-        if (a != null)
+        if (a)
         {
             timer.GetComponent<Text>().enabled = true;
             timer.StartTimer();
         }
+        
     }
 
     private void OnTriggerExit(Collider collider)
     {
         var a = collider.GetComponentInChildren<SafeArea>();
-        if (a != null)
+        if (a)
         {
             timer.PauseTimer();
         }

@@ -424,4 +424,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21e2f9771285514a9368830c6c13669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToStayNearHelicopter: 10
+  timeToStayNearHelicopter: 15

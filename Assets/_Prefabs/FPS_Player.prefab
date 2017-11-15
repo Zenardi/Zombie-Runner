@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 114824527158447638}
   - component: {fileID: 114705745889931580}
   - component: {fileID: 136094916217223620}
+  - component: {fileID: 114492659224543156}
   m_Layer: 0
   m_Name: FPS_Player
   m_TagString: Player
@@ -1378,7 +1379,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1071184334801602}
   m_LocalRotation: {x: -0, y: -0.7372774, z: -0, w: 0.67559016}
-  m_LocalPosition: {x: 381.95, y: 51.939, z: 346.13}
+  m_LocalPosition: {x: 387.837, y: 51.939, z: 345.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4421652727756952}
@@ -1925,7 +1926,7 @@ BoxCollider:
   m_GameObject: {fileID: 1920017894558302}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 30, y: 30, z: 40}
   m_Center: {x: 0, y: 16, z: 0}
@@ -2027,7 +2028,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.18
+  m_Volume: 0.706
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2107,7 +2108,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.567
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2297,6 +2298,22 @@ MonoBehaviour:
   firstObjective: {fileID: 0}
   secongObjective: {fileID: 0}
   healthBar: {fileID: 0}
+--- !u!114 &114492659224543156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1071184334801602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c496eedb11c26944481650625bfbbdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoints: 100
+  healthBar: {fileID: 0}
+  damageSounds: []
+  deathSounds: []
+  deathVanishSeconds: 2
 --- !u!114 &114586036502895420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2323,6 +2340,7 @@ MonoBehaviour:
     MaximumX: 90
     smooth: 0
     smoothTime: 5
+    lockCursor: 1
   m_UseFovKick: 1
   m_FovKick:
     Camera: {fileID: 20421728548092184}
