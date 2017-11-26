@@ -71,7 +71,6 @@ GameObject:
   - component: {fileID: 143767474848941608}
   - component: {fileID: 114462179709539482}
   - component: {fileID: 114586036502895420}
-  - component: {fileID: 114054095229615858}
   - component: {fileID: 114824527158447638}
   - component: {fileID: 114705745889931580}
   - component: {fileID: 136094916217223620}
@@ -851,9 +850,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4421652727756952}
   - component: {fileID: 65989873060211856}
+  - component: {fileID: 114922805295997794}
+  - component: {fileID: 114932487713502716}
   m_Layer: 0
   m_Name: Landing Area
-  m_TagString: Untagged
+  m_TagString: LZ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2230,18 +2231,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114054095229615858
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1071184334801602}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e7d905bae60a4caab9b3404df881e58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeSinceLastTrigger: 0
 --- !u!114 &114307387114183040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2255,10 +2244,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceFog: 1
   excludeFarPixels: 1
-  useRadialDistance: 0
+  useRadialDistance: 1
   heightFog: 1
   height: 1
-  heightDensity: 2.97
+  heightDensity: 2.44
   startDistance: 0
   fogShader: {fileID: 4800000, guid: 70d8568987ac0499f952b54c7c13e265, type: 3}
 --- !u!114 &114342606279375612
@@ -2471,6 +2460,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatHappened: {fileID: 8300000, guid: 6f49368f721214fcc81fda6a7ccf9343, type: 3}
   goodLandingArea: {fileID: 8300000, guid: 0f00476efd1774d2587939e6bd1a6bb4, type: 3}
+--- !u!114 &114922805295997794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1920017894558302}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf5caa425134234e8fbe8b96f8a7f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114932487713502716
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1920017894558302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7d905bae60a4caab9b3404df881e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeSinceLastTrigger: 0
 --- !u!114 &114998821167523520
 MonoBehaviour:
   m_ObjectHideFlags: 1

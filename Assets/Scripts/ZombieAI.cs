@@ -158,13 +158,14 @@ namespace ZombieRunner.Characters
             while (patrolPath != null)
             {
                 Vector3 nextWaypointPos = patrolPath.transform.GetChild(nextwayPointIndex).position;
+                //Debug.Log("Going to " + nextWaypointPos);
                 zombie.SetDestination(nextWaypointPos);
                 CycleWaypointWhenClose(nextWaypointPos);
                 yield return new WaitForSeconds(waypoinDwellTime);
             }
 
             //so pra nao dar erro> REMOVER
-            yield return new WaitForSeconds(waypoinDwellTime);
+            // yield return new WaitForSeconds(waypoinDwellTime);
         }
 
         private void CycleWaypointWhenClose(Vector3 nextWaypointPos)

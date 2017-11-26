@@ -332,6 +332,7 @@
     <None Include="Assets\Enviriorment\Mirza Beig\README - Inferno VFX.txt" />
     <None Include="Assets\Enviriorment\RainMaker\Prefab\RainShader.shader" />
     <None Include="Assets\Enviriorment\RainMaker\Readme.txt" />
+    <None Include="Assets\Enviriorment\laxer tree pkg\README.txt" />
     <None Include="Assets\HUD\PS-ProgressBar\readme.txt" />
     <None Include="Assets\HUD\font\zombie\read_this.txt" />
     <None Include="Assets\HUD\font\zombie_control\zombiecontrol.txt" />

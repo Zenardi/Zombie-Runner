@@ -42,7 +42,7 @@ namespace Zombie.Characters
 
         [Header("Nav Mesh Agent")]
         [SerializeField]
-        float navMeshAgentStreetingSpeed = 1.0f;
+        float navMeshAgentStreetingSpeed = 1.2f;
         [SerializeField] float navMeshAgentStoppingDistance = 1.3f;
 
         NavMeshAgent navMeshAgent;
@@ -99,7 +99,7 @@ namespace Zombie.Characters
                     Debug.LogError(gameObject.name + " not a nav mesh");
                 }
 
-                if (navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance && isAlive)
+                if (navMeshAgent.remainingDistance >= navMeshAgent.stoppingDistance)
                 {
                     Move(navMeshAgent.desiredVelocity);
                 }

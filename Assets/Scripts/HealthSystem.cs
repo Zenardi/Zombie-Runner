@@ -57,8 +57,17 @@ public class HealthSystem : MonoBehaviour
         currentHealthPoints = Mathf.Clamp(currentHealthPoints - damage, 0f, maxHealthPoints);
         //var clip = damageSounds[UnityEngine.Random.Range(0, damageSounds.Length)];
         //audioSource.PlayOneShot(clip);
-        var a = GetComponent<ProgressBarPro>();
-        a.Value = currentHealthPoints;
+
+        try
+        {
+            var a = GetComponent<ProgressBarPro>();
+            a.Value = currentHealthPoints;
+        }
+        catch (Exception)
+        {
+        }
+
+
         if (characterDies)
         {
             StartCoroutine(KillCharacter());
@@ -77,9 +86,9 @@ public class HealthSystem : MonoBehaviour
         characterMovement.Kill();
         animator.SetTrigger(DEATH_TRIGGER);
 
-        audioSource.clip = deathSounds[UnityEngine.Random.Range(0, deathSounds.Length)];
-        audioSource.Play();
-        yield return new WaitForSecondsRealtime(audioSource.clip.length); //use audio clip later
+        //audioSource.clip = deathSounds[UnityEngine.Random.Range(0, deathSounds.Length)];
+        //audioSource.Play();
+        yield return new WaitForSecondsRealtime(1/*audioSource.clip.length*/); //use audio clip later
 
         var playerComponent = GetComponent<PlayerControl>();
         if (playerComponent && playerComponent.isActiveAndEnabled)
