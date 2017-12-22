@@ -91,6 +91,11 @@ public class Player : MonoBehaviour {
         isAlive = false;
     }
 
+    public bool IsHelicopterCalled()
+    {
+        return lz;
+    }
+
     public void OnFindClearArea () {
         //Invoke ("DropFlare", 3f);
         lz = true;

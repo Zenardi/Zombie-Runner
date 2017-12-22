@@ -28,6 +28,11 @@ namespace ZombieRunner.Characters
         float lastHitTime = 0;
         Animator animator;
 
+
+        bool inWeaponCircle = false;
+        bool inChaseRing = false;
+        bool outsideChaseRing = false;
+
         void Start()
         {
             player = GameObject.FindObjectOfType<Player>();
@@ -39,12 +44,24 @@ namespace ZombieRunner.Characters
         {
             if(zombie.IsAlive())
             {
-                distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
-                //WeaponSystem weaponSystem = GetComponent<WeaponSystem>();
-                // currentWeaponRange = weaponSystem.GetCurrentWeapon().GetMaxAttackRange();
-                bool inWeaponCircle = distanceToPlayer <= currentWeaponRange;
-                bool inChaseRing = distanceToPlayer > currentWeaponRange && distanceToPlayer <= chaseRadius;
-                bool outsideChaseRing = distanceToPlayer > chaseRadius;
+                if(player != null)
+                {
+                    distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
+                    //WeaponSystem weaponSystem = GetComponent<WeaponSystem>();
+                    // currentWeaponRange = weaponSystem.GetCurrentWeapon().GetMaxAttackRange();
+                    inWeaponCircle = distanceToPlayer <= currentWeaponRange;
+                    inChaseRing = distanceToPlayer > currentWeaponRange && distanceToPlayer <= chaseRadius;
+                    outsideChaseRing = distanceToPlayer > chaseRadius;
+                }
+                else
+                {
+                    distanceToPlayer = Vector3.Distance(FindObjectOfType<Player>().transform.position, transform.position);
+
+                    outsideChaseRing = false;
+                    inChaseRing = true;
+                    inWeaponCircle = distanceToPlayer <= currentWeaponRange;
+                }
+
 
                 if (outsideChaseRing)
                 {
@@ -56,7 +73,14 @@ namespace ZombieRunner.Characters
                     //weaponSystem.StopAttacking();
 
                     //start patrolling
-                    StartCoroutine(Patrol());
+                    if(patrolPath == null)
+                    {
+                        state = State.Chasing;
+                    }
+                    else
+                    {
+                        StartCoroutine(Patrol());
+                    }
 
                 }
 
@@ -163,9 +187,7 @@ namespace ZombieRunner.Characters
                 CycleWaypointWhenClose(nextWaypointPos);
                 yield return new WaitForSeconds(waypoinDwellTime);
             }
-
-            //so pra nao dar erro> REMOVER
-            // yield return new WaitForSeconds(waypoinDwellTime);
+            
         }
 
         private void CycleWaypointWhenClose(Vector3 nextWaypointPos)

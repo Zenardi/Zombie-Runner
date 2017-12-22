@@ -17,15 +17,26 @@ public class ClearArea : MonoBehaviour {
     void Update () {
         timeSinceLastTrigger += Time.deltaTime;
 
-        if (timeSinceLastTrigger > 1f && Time.realtimeSinceStartup > 10f && !foundClearArea)
+        if (timeSinceLastTrigger > 2f && Time.realtimeSinceStartup > 10f && !foundClearArea)
         {
             _player.OnFindClearArea();
+            Debug.Log("Clear Area Found!");
             //SendMessageUpwards("OnFindClearArea");
             foundClearArea = true;
         }
     }
 
 	void OnTriggerStay () {
+        timeSinceLastTrigger = 0;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        timeSinceLastTrigger = 0;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
         timeSinceLastTrigger = 0;
     }
 }
